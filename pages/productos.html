@@ -1,0 +1,35 @@
+<div class="container marketing">
+
+	<hr class="featurette-divider">
+
+	<!-- Three columns of text below the carousel -->
+	<h1 class="text-center" id="acei">Aceite de Oliva Exta Virgen</h1>
+
+	<hr class="featurette-divider">
+	<div class="row text-center" >	
+		<div class="col-lg-4" ng-repeat="aceite in aceites">
+			<img class="img-rounded img" src="{{aceite.imagen}}" alt="{{aceite.nombre}}" width="200" height="200">
+			<h2>{{aceite.nombre}}</h2>
+			<p>{{aceite.descripcion}}</p>
+			<p><a class="btn btn-default" href="" role="button">Detalles &raquo;</a></p>
+		</div><!-- /.col-lg-4 -->		
+	</div><!-- /.row -->
+
+	<hr class="featurette-divider">
+
+	<h1 class="text-center" id="cons">Aceitunas en Concerva</h1>
+
+	<hr class="featurette-divider">
+	<div class="row text-center">	
+		<div class="col-lg-4" ng-repeat="conserva in conservas">
+			<img class="img-rounded img" src="{{conserva.imagen}}" alt="{{conserva.nombre}}" width="200" height="200">
+			<h2>{{conserva.nombre}}</h2>
+			<p>{{conserva.descripcion}}</p>
+			<p><a class="btn btn-default" href="" role="button">Detalles &raquo;</a></p>
+		</div><!-- /.col-lg-4 -->		
+	</div><!-- /.row -->
+
+	<hr class="featurette-divider">
+
+</div><!-- /.container marketing -->
+

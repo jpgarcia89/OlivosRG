@@ -1,0 +1,25 @@
+<div class="container marketing">
+
+	<hr class="featurette-divider">
+
+	<h1 class="text-center">Servicos de OlivosRG</h1>
+
+	<hr class="featurette-divider">
+
+	<div ng-repeat="servicio in servicios">
+
+		<div class="row featurette">
+			<div  ng-class-odd="'col-md-7'" ng-class-even="['col-md-7', 'col-md-push-5']">
+			<h2 class="featurette-heading">{{servicio.nombre}} <span class="text-muted">{{servicio.cta}}</span></h2>
+				<p class="lead">{{servicio.descripcion}}</p>
+			</div>
+			<div cng-class-odd="'col-md-5'" ng-class-even="['col-md-5', 'col-md-pull-7']">
+				<img class="featurette-image img-responsive center-block" src="{{servicio.imagen}}" alt="{{servicio.nombre}}" width="400">
+			</div>
+		</div>
+
+		<hr class="featurette-divider">
+
+	</div><!-- end/ng-repeat -->
+
+</div>

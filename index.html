@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>OlivosRG</title>
+
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- AngulaJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
+	<!-- //ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js -->
+	
+
+</head>
+<body ng-app="app">	
+<div class="container">
+
+	<div class="masthead">
+        <div class="page-header">
+  <h1>OlivosRG <small>Productos Artesanales</small></h1>
+</div>
+        <nav ng-controller="navCtrl as nav">
+          <ul class="nav nav-justified">
+            <li ng-class="{active: nav.estoy('/')}"><a href="#/">Inicio</a></li>
+            <li ng-class="{active: nav.estoy('/productos')}"><a href="#/productos">Productos</a></li>
+            <li ng-class="{active: nav.estoy('/servicios')}"><a href="#/servicios">Servicios</a></li>
+			<li ng-class="{active: nav.estoy('/contactos')}"><a href="#/contactos">Contactos</a></li>
+          </ul>
+        </nav>
+      </div>	
+
+	<!-- Seccion donde se visualizaran los contenidos -->
+	<div ng-view></div>
+
+	<!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; 2016 OlivosRG, Inc.</p>
+      </footer>
+
+</div>
+
+	
+	<!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/navegacionController.js"></script>
+    <script src="js/controllers/homeController.js"></script>
+    <script src="js/controllers/productosController.js"></script>
+    <script src="js/controllers/serviciosController.js"></script>
+    <script src="js/controllers/contactosController.js"></script>
+
+    <!-- Services -->
+    <!-- <script src="js/services/photos.js"></script> -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
