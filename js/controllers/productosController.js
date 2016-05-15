@@ -8,7 +8,5 @@ app.controller('productosCtrl', function($scope, $http){
 			// console.log(res);
 			$scope.aceites=res.aceites;
 			$scope.conservas=res.conservas;
-			// $scope.productos = res;
-			//$scope.res = res;
 	});  
 });

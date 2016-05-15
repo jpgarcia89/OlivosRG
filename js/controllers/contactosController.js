@@ -15,11 +15,6 @@ app.controller('contactosCtrl', function($scope,$http,$location,$window){
 	$scope.$watch('form.email', function() {$scope.test();});
 	$scope.$watch('form.contenido', function() {$scope.test();});
 
-	// $scope.$watch('form.nombre',function() {validarNombre();});
-	// $scope.$watch('form.apellido',function() {validarApellido();});
-	// $scope.$watch('form.email', function() {validarMail();});
-	// $scope.$watch('form.contenido', function() {validarContenido();});
-
 	$scope.test = function() 
 	{
 		if (validarNombre() && validarApellido() && validarMail() && validarContenido()) 

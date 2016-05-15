@@ -6,6 +6,5 @@ app.controller('serviciosCtrl', function($scope,$http){
 		.success(function(res){
 			// console.log(res);
 			$scope.servicios = res;
-			//$scope.res = res;
 	});  
 });
