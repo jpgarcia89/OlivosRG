@@ -5,7 +5,7 @@ app.controller('productosCtrl', function($scope, $http){
 	
 	$http.get("php/getProductos.php")
 		.success(function(res){
-			console.log(res);
+			// console.log(res);
 			$scope.aceites=res.aceites;
 			$scope.conservas=res.conservas;
 			// $scope.productos = res;

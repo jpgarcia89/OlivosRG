@@ -4,7 +4,7 @@ app.controller('serviciosCtrl', function($scope,$http){
 
 	$http.get("php/getServicios.php")
 		.success(function(res){
-			console.log(res);
+			// console.log(res);
 			$scope.servicios = res;
 			//$scope.res = res;
 	});  

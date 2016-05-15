@@ -3,7 +3,9 @@
 	<div class="row">
 
 		<div class="col-md-6 col-md-offset-3">
+			
 			<hr class="featurette-divider">
+			
 			<div>			
 				<h1>Ponete en contacto con OlivosRg</h1>
 				
@@ -19,32 +21,32 @@
 					<div class="form-group">
 						<label class="control-label col-md-2">Nombre:</label>
 						<div class="col-md-10">          
-							<input type="text" class="form-control" ng-model="nombre" placeholder="Ej: Juan">
+							<input type="text" class="form-control" ng-model="form.nombre" placeholder="Ej: Juan">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">Apellido:</label>
 						<div class="col-md-10">
-							<input type="text" class="form-control" ng-model="apellido" placeholder="Ej: Garcia">
+							<input type="text" class="form-control" ng-model="form.apellido" placeholder="Ej: Garcia">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">Email:</label>
 						<div class="col-md-10">
-							<input type="password" class="form-control" ng-model="email" placeholder="Ej: abcd@dominio.com">
+							<input type="email" class="form-control" ng-model="form.email" placeholder="Ej: abcd@dominio.com">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">Contenido:</label>
 						<div class="col-md-10">
-							<textarea class="form-control" ng-model="contenido" placeholder="Contenido..."  rows="10" cols="40"></textarea> 
+							<textarea class="form-control" ng-model="form.contenido" placeholder="Contenido..."  rows="10" cols="40"></textarea> 
 						</div>
 					</div>					
 
-					<input type="submit" class="btn btn-primary col-md-4 col-md-offset-4" ng-disabled="error || incomplete" value="Enviar">
+					<input type="submit" class="btn btn-primary col-md-4 col-md-offset-4" ng-disabled="incompleto" value="Enviar">
 
 				</form>
 			</div>

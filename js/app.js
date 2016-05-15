@@ -25,6 +25,12 @@ app.config(function($routeProvider)
 		controller: "contactosCtrl",
 		controllerAs: "vm",
 		templateUrl: "pages/contactos.html"
+	})
+	.when("/successContacto", 
+	{
+		controller: "contactosCtrl",
+		controllerAs: "vm",
+		templateUrl: "pages/successContacto.html"
 	});
 });
 
