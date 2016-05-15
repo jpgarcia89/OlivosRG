@@ -1,6 +1,6 @@
 app.controller('contactosCtrl', ['$scope', function($scope,$http){
 	
-	$scope.nombre="paulo";
+	$scope.title="Contactos";
 
 	// $http.get("php/consulta.php")
 	// 	.success(function(res){

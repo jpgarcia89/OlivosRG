@@ -1,41 +1,60 @@
 <div class="container">
 
-	<form class="form-horizontal" ng-submit="enviar()">
+	<div class="row">
 
-		<input type="hidden">
+		<div class="col-md-6 col-md-offset-3">
+			<hr class="featurette-divider">
+			<div>			
+				<h1>Ponete en contacton con OlivosRg</h1>
+				
+				<p>Escribinos y preguntanos los q necesites saber, ya sea sobre nuestros producto, servicios o sobre nuestra empresa. Responderemos tus consultas a la brebedad.
+				</p>
+			</div>
 
-		<div class="form-group">
-		  <label class="col-sm-2 control-label">First Name:</label>
-		  <div class="col-sm-10">
-			<input type="text" ng-model="form.fName" ng-disabled="!edit" placeholder="First Name">
-		  </div>
+			<hr class="featurette-divider">
+
+			<div>
+				<form class="form-horizontal" ng-submit="enviar()">
+
+					<div class="form-group">
+						<label class="control-label col-md-2">Nombre:</label>
+						<div class="col-md-10">          
+							<input type="text" class="form-control" ng-model="nombre" placeholder="Ej: Juan">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">Apellido:</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" ng-model="apellido" placeholder="Ej: Garcia">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">Email:</label>
+						<div class="col-md-10">
+							<input type="password" class="form-control" ng-model="email" placeholder="Ej: abcd@dominio.com">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">Contenido:</label>
+						<div class="col-md-10">
+							<textarea class="form-control" ng-model="contenido" placeholder="Contenido..."  rows="10" cols="40"></textarea> 
+						</div>
+					</div>					
+
+					<input type="submit" class="btn btn-primary col-md-4 col-md-offset-4" ng-disabled="error || incomplete" value="Enviar">
+
+				</form>
+			</div>
+
+			<hr class="featurette-divider">
+
 		</div>
 
-		<div class="form-group">
-		  <label class="col-sm-2 control-label">Last Name:</label>
-		  <div class="col-sm-10">
-			<input type="text" ng-model="form.lName" ng-disabled="!edit" placeholder="Last Name">
-		  </div>
-		</div>
+	</div>
 
-		<div class="form-group">
-		  <label class="col-sm-2 control-label">Password:</label>
-		  <div class="col-sm-10">
-			<input type="password" ng-model="form.passw1" placeholder="Password">
-		  </div>
-		</div>
 
-		<div class="form-group">
-		  <label class="col-sm-2 control-label">Repeat:</label>
-		  <div class="col-sm-10">
-			<input type="password" ng-model="form.passw2" placeholder="Repeat Password">
-		  </div>
-		</div>
-
-		<button type="submit" class="btn btn-success" ng-disabled="error || incomplete">
-			<span class="glyphicon glyphicon-save"></span> Save Changes
-		</button>
-
-	</form>
 
 </div> <!-- /container -->
