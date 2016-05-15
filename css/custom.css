@@ -33,3 +33,9 @@ html{position:relative;min-height:100%}
     -webkit-transform: scale(1.5);
     transform: scale(1.5)
 }
+
+.page-header a{
+	color: black;
+	text-decoration: none;
+}
+

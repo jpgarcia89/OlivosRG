@@ -21,45 +21,45 @@
 
 </head>
 <body >	
-<div class="container">
+	<div class="container">
 
-	<div class="masthead">
-        <div class="page-header">
-  <h1>OlivosRG <small>Productos Artesanales</small></h1>
-</div>
-        <nav ng-controller="navCtrl as nav">
-          <ul class="nav nav-justified">
-            <li ng-click="titulo('Inicio')" ng-class="{active: estoy('/')}"><a href="#/">Inicio</a></li>
-            <li ng-click="titulo('Productos')" ng-class="{active: estoy('/productos')}"><a href="#/productos">Productos</a></li>
-            <li ng-click="titulo('Servicios')" ng-class="{active: estoy('/servicios')}"><a href="#/servicios">Servicios</a></li>
-			<li ng-click="titulo('Contactos')" ng-class="{active: estoy('/contactos')}"><a href="#/contactos">Contactos</a></li>
-          </ul>
-        </nav>
-      </div>	
+		<div class="masthead">
+			<div class="page-header">
+			<a href="#/"><h1><span><img class="img-circle" src="images/logo.jpg" width="80"></span>OlivosRG <small>Productos Artesanales</small></h1></a>
+			</div>
+			<nav ng-controller="navCtrl as nav">
+				<ul class="nav nav-justified">
+					<li ng-click="titulo('Inicio')" ng-class="{active: estoy('/')}"><a href="#/">Inicio</a></li>
+					<li ng-click="titulo('Productos')" ng-class="{active: estoy('/productos')}"><a href="#/productos">Productos</a></li>
+					<li ng-click="titulo('Servicios')" ng-class="{active: estoy('/servicios')}"><a href="#/servicios">Servicios</a></li>
+					<li ng-click="titulo('Contactos')" ng-class="{active: estoy('/contactos')}"><a href="#/contactos">Contactos</a></li>
+				</ul>
+			</nav>
+		</div>	
 
-	<!-- Seccion donde se visualizaran los contenidos -->
-	<div ng-view></div>
+		<!-- Seccion donde se visualizaran los contenidos -->
+		<div ng-view></div>
 
-	<!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; 2016 OlivosRG, Inc.</p>
-      </footer>
+		<!-- Site footer -->
+		<footer class="footer">
+			<p>&copy; 2016 OlivosRG, Inc.</p>
+		</footer>
 
-</div>
+	</div>
 
 	
 	<!-- Modules -->
-    <script src="js/app.js"></script>
+	<script src="js/app.js"></script>
 
-    <!-- Controllers -->
-    <script src="js/controllers/navegacionController.js"></script>
-    <script src="js/controllers/homeController.js"></script>
-    <script src="js/controllers/productosController.js"></script>
-    <script src="js/controllers/serviciosController.js"></script>
-    <script src="js/controllers/contactosController.js"></script>
+	<!-- Controllers -->
+	<script src="js/controllers/navegacionController.js"></script>
+	<script src="js/controllers/homeController.js"></script>
+	<script src="js/controllers/productosController.js"></script>
+	<script src="js/controllers/serviciosController.js"></script>
+	<script src="js/controllers/contactosController.js"></script>
 
-    <!-- Services -->
-    <!-- <script src="js/services/photos.js"></script> -->
+	<!-- Services -->
+	<!-- <script src="js/services/photos.js"></script> -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
