@@ -16,39 +16,49 @@
 			<hr class="featurette-divider">
 
 			<div>
-				<form class="form-horizontal" ng-submit="enviar()">
+				<form class="form-horizontal " ng-submit="enviar()" name="myForm">
 
-					<div class="form-group">
-						<label class="control-label col-md-2">Nombre:</label>
-						<div class="col-md-10">          
-							<input type="text" class="form-control" ng-model="form.nombre" placeholder="Ej: Juan">
-						</div>
-					</div>
 
-					<div class="form-group">
+					  <div ng-class="{'has-error': myForm.nombre.$invalid && !myForm.nombre.$pristine}" class="form-group" >
+					  	<label class="control-label col-md-2">Nombre:</label>
+					  	<div class="col-md-10">          
+						  	<input 	type="text" name="nombre" required ng-model="form.nombre" class="form-control" placeholder="Ej: Juan">
+						  	<span ng-show="myForm.nombre.$error.required && !myForm.nombre.$pristine" class="help-block">El campo <b>"Nombre"</b> es requerido </span>
+					  	</div>
+					 </div>
+
+					<div class="form-group" ng-class="{'has-error': myForm.apellido.$invalid && !myForm.apellido.$pristine}">
 						<label class="col-md-2 control-label">Apellido:</label>
 						<div class="col-md-10">
-							<input type="text" class="form-control" ng-model="form.apellido" placeholder="Ej: Garcia">
+							<input type="text" name="apellido" class="form-control" ng-model="form.apellido" placeholder="Ej: Garcia" required>
+							<span ng-show="myForm.apellido.$error.required && !myForm.apellido.$pristine" class="help-block">El campo <b>"Apellido"</b> es requerido </span>
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group" ng-class="{'has-error': myForm.email.$invalid && !myForm.email.$pristine}">
 						<label class="col-md-2 control-label">Email:</label>
 						<div class="col-md-10">
-							<input type="email" class="form-control" ng-model="form.email" placeholder="Ej: abcd@dominio.com">
+							<input type="email" class="form-control" name="email" ng-model="form.email" placeholder="Ej: abcd@dominio.com" required>
+							<span ng-show="myForm.email.$error.required && !myForm.email.$pristine" class="help-block">El campo <b>"Email"</b> es requerido </span>
+							<span ng-show="myForm.email.$error.email && !myForm.email.$pristine" class="help-block">El campo <b>"Email"</b> no es un Email valido</span>
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group" ng-class="{'has-error': myForm.cont.$invalid && !myForm.cont.$pristine}">
 						<label class="col-md-2 control-label">Contenido:</label>
 						<div class="col-md-10">
-							<textarea class="form-control" ng-model="form.contenido" placeholder="Contenido..."  rows="10" cols="40"></textarea> 
+							<textarea class="form-control" required name="cont" ng-model="form.contenido" placeholder="Contenido..."  rows="10" cols="40"></textarea> 
+							<span ng-show="myForm.cont.$error.required && !myForm.cont.$pristine" class="help-block">El campo <b>"Contenido"</b> es requerido </span>
 						</div>
 					</div>					
 
-					<input type="submit" class="btn btn-primary col-md-4 col-md-offset-4" ng-disabled="incompleto" value="Enviar">
+					<input type="submit" class="btn btn-primary col-md-4 col-md-offset-4" ng-disabled="myForm.$invalid" value="Enviar">
 
 				</form>
+
+
+
+
 			</div>
 
 			<hr class="featurette-divider">
